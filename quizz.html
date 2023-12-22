@@ -1,0 +1,154 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Les Terminaux</title>
+		<link rel="stylesheet" href="Site.css" />		
+	</head>
+	
+	<body>
+
+		<nav>
+			<div class="navigation">
+				<a href="index.html" class="login" ><img src="images/login.png" title="Login"alt="Login" width="7%"/></a>
+				<a href="page1.html" class="text_lien">L'histoire</a>
+				<a href="page2.html" class="text_lien">Utilités </a>
+				<a href="page3.html" class="text_lien">Les différents types</a>
+				<a href="page4.html" class="text_lien">Secteur d'utilisation</a>
+				<a href="quizz.html" class="text_lien">Quizz</a>
+			</div>
+			</nav>
+			<header>
+				<div id="contenu" class="contenu-contenu">
+					<div class="title">
+						<h1 class="Les-Terminaux">Les <span class="text">Terminaux</span></h1>
+					</div>
+					<div>
+						<img src="images/quizz.png" class="image" alt="Quizz Image">
+					</div>
+				</div>
+			</header>
+			<main>
+			<div>
+			<h1>Questionnaire</h1>
+			<form>
+	
+				<p>Question 1 : Entre quelles années les terminaux ont fait leurs premières apparitions?</p><br/> 
+				
+				<input name="q1" type="radio" /> 1960-1970<br/> 
+				<input name="q1" type="radio" /> 1965-1975<br/> 
+				<input name="q1" type="radio" /> 1970-1980<br/> 
+				
+				<p>Question 2 :Comment est appelé un terminal sur Windows?</p><br/> 
+				
+				<input name="q2" type="radio" /> Lunar client<br/> 
+				<input name="q2" type="radio" /> Bash<br/> 
+				<input name="q2" type="radio" /> CMD<br/> 
+				
+				<p>Question 3 :Qu'est-ce qu'un terminal ?</p><br/> 
+				
+				<input name="q3" type="radio" /> Dernière classe du lycée, après la première, pour les enfants de 17-18 ans.<br/> 
+				<input name="q3" type="radio" /> Une interface utilisateur basée sur le texte, permettant d'interagir avec des ordinateurs.<br/>
+				<input name="q3" type="radio" /> Installations pour le déchargement de navires de transport<br/>
+
+				<p>Question 4 :Quelle commande permet de voir tous les fichiers et dossiers dans le répertoire actuel ?</p><br/> 
+				
+				<input name="q4" type="radio" /> tasklist<br/> 
+				<input name="q4" type="radio" /> ipconfig<br/>
+				<input name="q4" type="radio" /> dir<br/>
+				
+				<p>Question 5 : Lequel de ces métiers n'a aucun rapport avec les terminaux?</p><br/> 
+				
+				<input name="q5" type="radio" />Myrmécologue  <br/> 
+				<input name="q5" type="radio" />Sécurité Informatique <br/>
+				<input name="q5" type="radio" />Infrastructure Cloud <br/>
+				
+				</br>
+				<input type="button" id="buttonq" value="Vérifier les réponses" onclick="affichage_score();"/>
+				
+				</form>
+				
+				<script type="text/javascript">
+				
+				function affichage_score(){
+					
+				var points=0;
+				var rep1=document.getElementsByName('q1');
+				var rep2=document.getElementsByName('q2');
+				var rep3=document.getElementsByName('q3');
+				var rep4=document.getElementsByName('q4');
+				var rep5=document.getElementsByName('q5');
+				var repondu1=false;
+				var repondu2=false;
+				var repondu3=false;
+				var repondu4=false;
+				var repondu5=false;
+
+
+				if ((rep1[0].checked) || (rep1[1].checked) || (rep1[2].checked))
+				{
+					repondu1=true;
+				}
+				if ((rep2[0].checked) || (rep2[1].checked) || (rep2[2].checked))
+				{
+					repondu2=true;
+				}
+				if ((rep3[0].checked) || (rep3[1].checked) || (rep3[2].checked))
+				{
+					repondu3=true;
+				}
+				if ((rep4[0].checked) || (rep4[1].checked) || (rep4[2].checked))
+				{
+					repondu4=true;
+				}
+				if ((rep5[0].checked) || (rep5[1].checked) || (rep5[2].checked))
+				{
+					repondu5=true;
+				}
+
+				if (repondu1 && repondu2 && repondu3 && repondu4 && repondu5)
+				{
+				if (rep1[0].checked)
+				{
+					points = points+1
+				}
+
+				if (rep2[2].checked)
+				{
+					points = points+1
+				}
+
+				if (rep3[1].checked)
+				{
+					points = points+1
+				}
+
+				if (rep4[2].checked)
+				{
+					points = points+1
+				}
+
+
+				if (rep5[0].checked)
+				{
+					points = points+1
+				}
+
+
+				alert ('Votre score est de '+points+'/5 bien joué !!')
+				}
+				else
+				{
+				alert ('Vous n\'avez pas repondu a toutes les questions.');
+				}
+				}
+				</script>
+			</main>
+			<footer>
+		
+			</footer>
+</body>
+
+</div>
+</html>
+		

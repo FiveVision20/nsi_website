@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Les Terminaux</title>
+		<link rel="stylesheet" href="Site.css" />		
+	</head>
+	
+	<body id="background">
+	
+	<div id="carre">
+	<div id="barreco">
+		<h2>Connexion</h2>
+	<form>
+			<input type="text"  placeholder="Pseudo" 	   id= "Login" required><br>
+			<input type="password"  placeholder="Mot de passe" id="MDP"    required><br>
+			<button type="button" onclick="checkAnswers()" id="buttonc">Se connecter</button>
+		</form>
+		<script>
+			function checkAnswers() {
+				var R1 = document.getElementById("Login").value;
+				var R2 = document.getElementById("MDP").value;
+				if (R1 == "Vision" && R2 == "azertyuiop") {
+					window.location.href = "page1.html";
+				} 
+				else {
+					alert("Désolé, votre pseudo ou votre mot de passe est incorrectes. Veuillez réessayer.");
+				}
+			}
+		</script>
+	</div>
+	</div>
+	</body>
+	
+</html>

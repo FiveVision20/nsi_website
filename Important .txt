@@ -1,0 +1,4 @@
+Login = Vision
+Mot de passe = azertyuiop
+
+/!\ Mettre son navigateur en zoom 100% /!\
